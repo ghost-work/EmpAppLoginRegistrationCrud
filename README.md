@@ -1,7 +1,7 @@
 # EmpAppLoginRegistrationCrud
 
 
-                      **********     ===   Asp.net core mvc (role based crud operation) (using scaffolded)  ===  ********
+                      **********     ===   Asp.net core mvc (role based crud operation) (using scaffolding)  ===  ********
 						   
 *****  Admin-Login  **  Admin-Registration ** view all registered Employee ** crud opeartion on Employee Deatils only by Admin Role Personal   ***********
 
