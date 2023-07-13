@@ -1,5 +1,6 @@
 using EmployeeAplication.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace EmployeeAplication
 {
@@ -18,6 +19,9 @@ namespace EmployeeAplication
                     options.UseSqlServer(builder.Configuration.GetConnectionString("ConnectDB"));
                 });
 
+                        builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+                .AddEntityFrameworkStores<ApplicationDbContext>();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -28,6 +32,9 @@ namespace EmployeeAplication
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseAuthentication();
+
+            app.MapRazorPages();
 
             app.UseAuthorization();
 

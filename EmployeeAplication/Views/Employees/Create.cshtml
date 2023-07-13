@@ -29,12 +29,26 @@
             </div>
             <div class="form-group">
                 <label asp-for="WorkLocation" class="control-label"></label>
-                <input asp-for="WorkLocation" class="form-control" />
+                
+                <select asp-for="WorkLocation" class="form-control">
+                    <option value="">Select a Location</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Bangalore">Bangalore</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                </select>
                 <span asp-validation-for="WorkLocation" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Department" class="control-label"></label>
-                <input asp-for="Department" class="form-control" />
+                
+                <select asp-for="Department" class="form-control">
+                    <option value="">Select a Department</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Engineering & IT">Engineering & IT</option>
+                    <option value="Production">Production</option>
+                </select>
                 <span asp-validation-for="Department" class="text-danger"></span>
             </div>
             <div class="form-group">
