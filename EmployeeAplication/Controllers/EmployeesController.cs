@@ -65,6 +65,7 @@ namespace EmployeeAplication.Controllers
                 _context.Add(employee);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
+               // return Json(new { success = true, message = "Form submitted successfully!" });
             }
             return View(employee);
         }
